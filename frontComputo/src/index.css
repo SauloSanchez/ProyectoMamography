@@ -1,0 +1,71 @@
+section{
+    padding: 100px 200px;
+  }
+
+@media (max-width: 1040px){
+    section{
+        padding: 100px 20px;
+    }
+}
+
+@media (max-width: 430px){
+    section{
+        padding: 100px 20px;
+        width: 100%;
+        display: block;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        object-fit: contain;
+    }
+}
+
+.font_titulo_personalizado {
+    color: #de4e00;
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-weight: 450;
+    /* font-family: 'Times New Roman', Times, sans-serif; */
+}
+
+.font_titulo_personalizado2 {
+  color: #de4e00;
+  font-size: 34px;
+  line-height: 60px;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+  font-weight: 450;
+  /* font-family: 'Times New Roman', Times, sans-serif; */
+}
+
+.font_personalizado {
+    /* font-family: 'Times New Roman', Times, sans-serif; */
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 38px;
+}
+
+.font_personalizadoTexto {
+    /* font-family: 'Times New Roman', Times, sans-serif; */
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.customX {
+    color: #df382c;
+}
+
+.customX:hover {
+    color: #df382c;
+}
+
+.customX:active {
+    color: #fff;
+}

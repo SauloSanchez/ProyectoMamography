@@ -1,0 +1,7 @@
+django
+djangorestframework
+django_resized
+opencv-python
+django_cleanup
+numpy
+django-cors-headers
