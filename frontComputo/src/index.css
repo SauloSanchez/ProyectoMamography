@@ -11,7 +11,7 @@
   color: #e47137a8;
   font-size: 34px;
   line-height: 60px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: capitalize;
   font-weight: 450;
 }
@@ -31,6 +31,9 @@
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
+
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
 
 .buttonCustome:hover{
@@ -42,6 +45,28 @@
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
+
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.imgDiv{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.apareciendo{
+    animation: apareciendo 2s;
+}
+
+@keyframes apareciendo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -57,7 +82,7 @@
         color: #e47137a8;
         font-size: 24px;
         line-height: 60px;
-        letter-spacing: 5px;
+        letter-spacing: 1px;
         text-transform: capitalize;
         font-weight: 450;
     }
