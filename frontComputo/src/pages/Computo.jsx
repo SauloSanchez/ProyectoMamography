@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Form, Row, Col, Container, Card, Navbar, Nav } from "react-bootstrap";
 import "../css/view.css";
-import ucaribeLogo from "../assets/ucaribeLogo.png";
+import ucaribeLogo from "../assets/simbolo.png";
 import { postRequest } from "../utils/axiosClient";
 
 const Computo = () => {
@@ -10,6 +10,7 @@ const Computo = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
     watch,
   } = useForm();
 
@@ -23,6 +24,8 @@ const Computo = () => {
       if (watch("logo")[0].size !== undefined) {
         setBackLogo(watch("logo")[0]);
         base2a64ViewLogo(watch("logo")[0]);
+        setEtiqueta("");
+        setInfo("");
       } else {
         setBackLogo(watch("logo"));
       }
@@ -50,11 +53,18 @@ const Computo = () => {
     } catch (error) {
       console.log(error);
     }
+    reset();
   };
 
   return (
     <>
-      <Navbar collapseOnSelect expand="xl" bg="white" fixed="top">
+      <Navbar
+        collapseOnSelect
+        expand="xl"
+        bg="white"
+        fixed="top"
+        className="apareciendo"
+      >
         <Container>
           <Navbar.Brand
             href="https://www.unicaribe.mx/"
@@ -89,20 +99,23 @@ const Computo = () => {
           <Row className="text-center">
             <Col xs={12} md={12} lg={12}>
               <span className="pruebaSpan font_titulo_personalizado2">
-                Mammography-
-              </span>
+                Mammography
+              </span>{" "}
               <span className="pruebaSpan font_titulo_personalizado2">
-                Image-
-              </span>
+                Image
+              </span>{" "}
               <span className="pruebaSpan font_titulo_personalizado2">
-                Analysis-
-              </span>
+                Analysis
+              </span>{" "}
               <span className="pruebaSpan font_titulo_personalizado2">
                 Society
               </span>
             </Col>
             <Col xs={12} md={12} lg={12} className="mt-2">
-              <span className="font_titulo_personalizado">ALL MIAS</span>
+              <span className="pruebaSpan2 font_titulo_personalizado">ALL</span>{" "}
+              <span className="pruebaSpan2 font_titulo_personalizado">
+                MIAS
+              </span>
             </Col>
           </Row>
           <Row className="justify-content-center">
@@ -113,14 +126,20 @@ const Computo = () => {
                     <Row className="justify-content-center">
                       <Col xs={12} md={12} lg={12}>
                         <Card style={{ border: "none" }}>
-                          <Card.Body>
+                          <Card.Body
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
                             {modificacionLogoView.length > 0 ? (
                               <Card.Img
                                 width={250}
                                 height={250}
                                 variant="top"
                                 src={modificacionLogoView}
-                                className="mb-4 mx-1"
+                                className="imgDiv"
                               />
                             ) : (
                               ""
@@ -166,9 +185,20 @@ const Computo = () => {
                             accept="image/*"
                             size="sm"
                             type="file"
-                            {...register("logo")}
+                            {...register("logo", {
+                              required: {
+                                value: true,
+                                message: "Ingrese una imagen",
+                              },
+                            })}
                           />
                         </Form.Group>
+                        {/* {errors.logo && (
+
+                          <span className="text-danger text-small d-flex mb-2 justify-content-center bg-white">
+                            {errors.logo.message}
+                          </span>
+                        )} */}
                       </Col>
                     </Row>
                   </Card.Body>
