@@ -1,0 +1,114 @@
+.font_titulo_personalizado {
+    color: #FF6F91;
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-weight: 450;
+}
+
+.font_titulo_personalizado2 {
+  color: #000000a8;
+  font-size: 34px;
+  line-height: 60px;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  font-weight: 450;
+}
+
+.font_personalizado {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 38px;
+}
+
+.buttonCustome{
+    background-color: #fff;
+    color: #FF6F91;
+    border: 2px solid #FF6F91;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonCustome:hover{
+    background-color: #FF6F91;
+    color: #fff;
+    border: 2px solid #FF6F91a8;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.imgDiv{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.apareciendo{
+    animation: apareciendo 2s;
+}
+
+@keyframes apareciendo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .font_titulo_personalizado {
+        color: #E47137;
+        font-size: 34px;
+        line-height: 60px;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+        font-weight: 450;
+    }
+    .font_titulo_personalizado2 {
+        color: #e47137a8;
+        font-size: 24px;
+        line-height: 60px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-weight: 450;
+    }
+    .font_personalizado {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 38px;
+    }
+    .buttonCustome{
+        background-color: #fff;
+        color: #E47137;
+        border: 2px solid #e47137a8;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+    .buttonCustome:hover{
+        background-color: #E47137;
+        color: #fff;
+        border: 2px solid #e47137a8;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+}
